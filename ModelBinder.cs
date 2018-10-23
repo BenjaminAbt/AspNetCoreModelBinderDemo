@@ -51,7 +51,7 @@ namespace AspNetCoreModelBinderDemo
 
     public class MyPocoModelBinder : IModelBinder
     {
-        public async Task BindModelAsync(ModelBindingContext bindingContext)
+        public Task BindModelAsync(ModelBindingContext bindingContext)
         {
             if (bindingContext == null)
             {
@@ -91,6 +91,7 @@ namespace AspNetCoreModelBinderDemo
                 }
             }
 
+            return Task.CompletedTask;
         }
     }
 }
