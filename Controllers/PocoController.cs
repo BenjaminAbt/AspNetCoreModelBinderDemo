@@ -13,7 +13,7 @@ namespace AspNetCoreModelBinderDemo.Controllers
             return Ok(MyPocoRepository.Pocos);
         }
   
-        [HttpGet("{id}")]
+        [HttpGet("{poco}")]
         public ActionResult<ActionResult<MyPoco>> Get(MyPoco poco)
         {
             if (poco is null)
